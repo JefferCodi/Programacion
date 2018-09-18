@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Local Storage</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script type="text/javascript" src="../localStorage/localStorage.js"></script>
+</head>
+<body onload="init()">
+	<div class="container">
+        <div class="row">
+        	<div class="col-sm-5 bg-light">
+        		<header class="text-center"><h1>Registros</h1></header>
+        		<aside class="leftbar">
+        		    <div>
+        		        <fieldset class="form-group">
+        		            <label for="firstname"><span>Primer Nombre</span></label>
+        		            <input type="text" placeholder="enter first name" class="form-control" id="firstname">
+        		        </fieldset>
+        		        <fieldset class="form-group">
+        		            <label for="lastname">Segundo Nombre</label>
+        		            <input type="text" placeholder="enter last name" class="form-control" id="lastname">
+        		        </fieldset>
+        		        <fieldset class="form-group">
+        		            <label for="rollnum">Roll Number</label>
+        		            <input type="text" placeholder="enter Roll number" class="form-control" id="rollnum">
+        		        </fieldset>
+        		        <fieldset class="form-group">
+        		            <label for="subject">Tema</label>
+        		            <select id="subject" class="form-control "	>
+        		                <option value="Math">Matematicas</option>
+        		                <option value="Physics">Fisica</option>
+        		                <option value="Chemistry">Quimica</option>
+        		                <option value="English">English</option>
+        		            </select>
+        		        </fieldset>
+        		        <fieldset class="form-group text-center">
+        		            <label for="submit"> </label>
+        		            <button id="submit" onclick="onRegisterPressed()">Register</button>
+        		            <button id="clear" onclick="onClarPressed()">Clear</button>
+        		        </fieldset>
+        		    </div>
+        		</aside>
+        	</div>
+
+        	<div class="col-sm-7 mt-5">
+        		<aside class="rightbar">
+        		    <table id="regtable" class="table">
+        		        <thead class="thead-dark">
+        		            <tr>
+        		                <th>Primer Nombre</th>
+        		                <th>Segundo Nombre</th>
+        		                <th>Roll Number</th>
+        		                <th>Tema</th>
+        		                <th>Action</th>
+        		            </tr>
+        		        </thead>
+        		        <tbody id="tablerows">
+        		        </tbody>
+        		    </table>
+        		</aside>
+        		<footer class="headerbar bottom"></footer>
+        	</div>
+        </div>
+    </div>
+</body>
+</html>
