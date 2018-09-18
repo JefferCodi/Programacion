@@ -9,7 +9,7 @@
 <body onload="init()">
 	<div class="container">
         <div class="row">
-        	<div class="col-sm-5 bg-light">
+        	<div class="col-sm-12 col-md-4 bg-light mt-5">
         		<header class="text-center"><h1>Registros</h1></header>
         		<aside class="leftbar">
         		    <div>
@@ -36,14 +36,14 @@
         		        </fieldset>
         		        <fieldset class="form-group text-center">
         		            <label for="submit"> </label>
-        		            <button id="submit" onclick="onRegisterPressed()">Register</button>
-        		            <button id="clear" onclick="onClarPressed()">Clear</button>
+        		            <button id="submit" onclick="onRegisterPressed()" class="btn btn-success">Registar</button>
+        		            <button id="clear" onclick="onClarPressed()" class="btn btn-primary">Limpiar</button>
         		        </fieldset>
         		    </div>
         		</aside>
         	</div>
 
-        	<div class="col-sm-7 mt-5">
+        	<div class="col-sm-12 col-md-8 mt-5">
         		<aside class="rightbar">
         		    <table id="regtable" class="table">
         		        <thead class="thead-dark">

@@ -14,6 +14,9 @@ function onRegisterPressed() {
     var lastName = document.getElementById("lastname").value;
     var rollNum = document.getElementById("rollnum").value;
     var subject = document.getElementById("subject").value;
+    var element = document.getElementById("submit");
+    element.classList.remove("btn-warning")
+    element.classList.add("btn-success");
     var stuObj = {firstname: firstName, lastname: lastName, rollnum: rollNum, subject: subject};
     if (selectedIndex === -1) {
         studentsArray.push(stuObj);
@@ -36,7 +39,7 @@ function prepareTableCell(index, firstName, lastName, rollNum, subject) {
     lastNameCell.innerHTML = lastName;
     rollNumCell.innerHTML = rollNum;
     subjectCell.innerHTML = subject;
-    actionCell.innerHTML = '<button onclick="onEditPressed(' + index + ')">Edit</button><br/><button onclick="deleteTableRow(' + index + ')">Delete</button>';
+    actionCell.innerHTML = '<button onclick="onEditPressed(' + index + ')" class="btn btn-warning">Editar</button><br/><button onclick="deleteTableRow(' + index + ')" class="btn btn-danger">Eliminar</button>';
 }
 function deleteTableRow(index) {
     /*
@@ -63,6 +66,9 @@ function onEditPressed(index) {
     document.getElementById("lastname").value = stuObj.lastname;
     document.getElementById("rollnum").value = stuObj.rollnum;
     document.getElementById("subject").value = stuObj.subject;
+    var element = document.getElementById("submit");
+    element.classList.remove("btn-success")
+    element.classList.add("btn-warning");
     document.getElementById("submit").innerHTML = "Update";
     
 }
