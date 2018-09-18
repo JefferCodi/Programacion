@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Local Storage</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="LocalStorage/LocalStorage.js"></script>
+</head>
+body onload="init()">
+        <div class="container">
+            <header class="headerbar top"><h1>Registros</h1></header>
+            <aside class="leftbar">
+                <div>
+                    <fieldset>
+                        <label for="firstname"><span>Primer Nombre</span></label>
+                        <input type="text" placeholder="enter first name" id="firstname">
+                    </fieldset>
+                    <fieldset>
+                        <label for="lastname">Segundo Nombre</label>
+                        <input type="text" placeholder="enter last name" id="lastname">
+                    </fieldset>
+                    <fieldset>
+                        <label for="rollnum">Roll Nombre</label>
+                        <input type="text" placeholder="enter Roll number" id="rollnum">
+                    </fieldset>
+                    <fieldset>
+                        <label for="subject">Tema</label>
+                        <select id="subject">
+                            <option value="Math">Matematicas</option>
+                            <option value="Physics">Fisica</option>
+                            <option value="Chemistry">Quimica</option>
+                            <option value="English">English</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="submit"> </label>
+                        <button id="submit" onclick="onRegisterPressed()">Register</button>
+                        <button id="clear" onclick="onClarPressed()">Clear</button>
+                    </fieldset>
+                </div>
+            </aside>
+            <aside class="rightbar">
+                <table id="regtable">
+                    <thead>
+                        <tr>
+                            <th>Primer Nombre</th>
+                            <th>Segundo Nombre</th>
+                            <th>Roll Number</th>
+                            <th>Tema</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablerows">
+                    </tbody>
+                </table>
+            </aside>
+            <footer class="headerbar bottom"></footer>
+        </div>
+    </body>
+</html>
+SYZP_28ag1991
